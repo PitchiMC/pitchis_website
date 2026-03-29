@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PointsAPI | Pitchi</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Syne:wght@700&display=swap" rel="stylesheet">
+</head>
+<body class="body-lines">
+
+    <nav class="locbar">
+        <div class="locbar_links">
+            <a href="/index.html#hero" class="locbar_text">Home</a>
+            <a href="/index.html#aboutme" class="locbar_text">About me</a>
+        </div>
+
+        <a href="/index.html" class="locbar_brand">PITCHI</a>
+
+        <div class="locbar_links">
+            <a href="/index.html#projects" class="locbar_text active">Projects</a>
+            <a href="/index.html#links" class="locbar_text">Links</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="badge">Developer Tool</div>
+        <img src="/resources/img/points_api.png" alt="Icon" class="project_icon_large">
+        <h1>Points<span class="highlight">API</span></h1>
+        <p>A powerful and lightweight economy bridge. Manage player points across multiple plugins with ease.</p>
+        <div class="hero_btns">
+            <a href="https://modrinth.com/plugin/pointsapi" target="_blank" class="btn_primary">View on Modrinth</a>
+            <a href="https://discord.com/invite/HKbunnVuRD" class="btn_secondary">API Documentation</a>
+        </div>
+    </header>
+
+    <section class="section alt_bg">
+        <div class="container">
+            <div class="grid_2col">
+                <div class="text_block">
+                    <h2 class="section_title" style="text-align: left; margin-bottom: 1.5rem;">For Developers</h2>
+                    <p>Stop reinventing the wheel for every plugin. <strong>PointsAPI</strong> provides a globalized system to handle player currencies, points, or tokens without complex database setups.</p>
+                    <br>
+                    <p>Designed for high performance and scalability, it allows other developers to hook into your ecosystem or use PointsAPI as a standalone economy backbone for their servers.</p>
+                </div>
+
+                <div class="card">
+                    <h3 class="highlight" style="margin-bottom: 1rem;">Core Features</h3>
+                    <ul class="feature_list">
+                        <li><strong>Fast Access:</strong> Ultra-low latency point retrieval.</li>
+                        <li><strong>Developer Friendly:</strong> Simple Methods (Get, Add, Set, Remove).</li>
+                        <li><strong>UUID Support:</strong> Fully compatible with modern Minecraft.</li>
+                        <li><strong>Event System:</strong> Custom events for point changes.</li>
+                        <li><strong>Lightweight:</strong> Zero impact on server TPS.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section_title">Dependency (Maven)</h2>
+            <div class="config_container">
+                <div class="config_header">
+                    <span>pom.xml</span>
+                    <button class="btn_copy" id="copyBtn" onclick="copyConfig()">Copy Dependency</button>
+                </div>
+                <pre id="configCode">&lt;dependency&gt;
+    &lt;groupId&gt;de.pitchi&lt;/groupId&gt;
+    &lt;artifactId&gt;pointsapi&lt;/artifactId&gt;
+    &lt;version&gt;1.0.0&lt;/version&gt;
+    &lt;scope&gt;provided&lt;/scope&gt;
+&lt;/dependency&gt;</pre>
+            </div>
+        </div>
+    </section>
+
+    <section class="section alt_bg">
+        <div class="container" style="text-align: center;">
+            <h2 class="section_title">Reliable Backend</h2>
+            <div class="grid">
+                <div class="links_card">
+                    <h4>Thread Safe</h4>
+                    <p style="color: var(--text-muted);">Async-ready operations</p>
+                </div>
+                <div class="links_card">
+                    <h4>Open Source</h4>
+                    <p style="color: var(--text-muted);">Transparent development</p>
+                </div>
+                <div class="links_card">
+                    <h4>Efficient</h4>
+                    <p style="color: var(--text-muted);">Optimized data storage</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Pitchi (@pitchimc - Github, @pitchi777 - Discord)</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

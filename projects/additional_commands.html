@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Additional Commands | Pitchi</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Syne:wght@700&display=swap" rel="stylesheet">
+</head>
+<body class="body-lines">
+
+    <nav class="locbar">
+        <div class="locbar_links">
+            <a href="/index.html#hero" class="locbar_text">Home</a>
+            <a href="/index.html#aboutme" class="locbar_text">About me</a>
+        </div>
+
+        <a href="/index.html" class="locbar_brand">PITCHI</a>
+
+        <div class="locbar_links">
+            <a href="/index.html#projects" class="locbar_text active">Projects</a>
+            <a href="/index.html#links" class="locbar_text">Links</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="badge">Server Utility</div>
+        <img src="/resources/img/additional_commands.png" alt="Icon" class="project_icon_large">
+        <h1>Additional <span class="highlight">Commands</span></h1>
+        <p>Enhance your server experience with essential tools. From teleportation to utility shortcuts, all in one lightweight package.</p>
+        <div class="hero_btns">
+            <a href="https://modrinth.com/plugin/additional-commands" target="_blank" class="btn_primary">Download on Modrinth</a>
+            <a href="https://discord.com/invite/HKbunnVuRD" class="btn_secondary">Get Support</a>
+        </div>
+    </header>
+
+    <section class="section alt_bg">
+        <div class="container">
+            <div class="grid_2col">
+                <div class="text_block">
+                    <h2 class="section_title" style="text-align: left; margin-bottom: 1.5rem;">Better Server Control</h2>
+                    <p>Stop struggling with vanilla limitations. <strong>Additional Commands</strong> adds the most requested features for server owners and players alike, without the bloat of massive "all-in-one" plugins.</p>
+                    <br>
+                    <p>Whether you need a quick way to heal, fly, or manage player locations, this plugin provides a clean and intuitive command structure that fits perfectly into any survival or creative server.</p>
+                </div>
+
+                <div class="card">
+                    <h3 class="highlight" style="margin-bottom: 1rem;">Included Features</h3>
+                    <ul class="feature_list">
+                        <li><strong>Essentials:</strong> /heal, /feed, and /fly support.</li>
+                        <li><strong>Teleportation:</strong> Set homes and warp across the world.</li>
+                        <li><strong>Utility:</strong> Quick access to crafting tables and enderchests.</li>
+                        <li><strong>Permissions:</strong> Fully compatible with LuckPerms.</li>
+                        <li><strong>Optimized:</strong> No lag, just pure functionality.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section_title">Quick Setup</h2>
+            <div class="config_container">
+                <div class="config_header">
+                    <span>permissions.txt</span>
+                    <button class="btn_copy" id="copyBtn" onclick="copyConfig()">Copy Example</button>
+                </div>
+                <pre id="configCode"># Grant access to all basic commands
+additionalcommands.user.*
+
+# Grant access to admin features
+additionalcommands.admin.*</pre>
+            </div>
+        </div>
+    </section>
+
+    <section class="section alt_bg">
+        <div class="container" style="text-align: center;">
+            <h2 class="section_title">Why use it?</h2>
+            <div class="grid">
+                <div class="links_card">
+                    <h4>Lightweight</h4>
+                    <p style="color: var(--text-muted);">Minimal RAM & CPU usage</p>
+                </div>
+                <div class="links_card">
+                    <h4>Easy to use</h4>
+                    <p style="color: var(--text-muted);">Self-explanatory commands</p>
+                </div>
+                <div class="links_card">
+                    <h4>Configurable</h4>
+                    <p style="color: var(--text-muted);">Adjust settings to your needs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Pitchi (@pitchimc - Github, @pitchi777 - Discord)</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

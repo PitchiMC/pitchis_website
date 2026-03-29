@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villager on a Leash | Pitchi</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Syne:wght@700&display=swap" rel="stylesheet">
+</head>
+<body class="body-lines">
+
+    <nav class="locbar">
+        <div class="locbar_links">
+            <a href="/index.html#hero" class="locbar_text">Home</a>
+            <a href="/index.html#aboutme" class="locbar_text">About me</a>
+        </div>
+
+        <a href="/index.html" class="locbar_brand">PITCHI</a>
+
+        <div class="locbar_links">
+            <a href="/index.html#projects" class="locbar_text active">Projects</a>
+            <a href="/index.html#links" class="locbar_text">Links</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="badge">Minecraft Plugin</div>
+        <img src="/resources/img/villager_on_a_leash.png" alt="Icon" class="project_icon_large">
+        <h1>Villager on a <span class="highlight">Leash</span></h1>
+        <p>The easiest way to transport villagers. No boats, no minecarts – just a lead and a right-click.</p>
+        <div class="hero_btns">
+            <a href="https://modrinth.com/plugin/villiager-on-a-leash" target="_blank" class="btn_primary">Download on Modrinth</a>
+            <a href="https://discord.com/invite/HKbunnVuRD" class="btn_secondary">Support Discord</a>
+        </div>
+    </header>
+
+    <section class="section alt_bg">
+        <div class="container">
+            <div class="grid_2col">
+                <div class="text_block">
+                    <h2 class="section_title" style="text-align: left; margin-bottom: 1.5rem;">Solving the Struggle</h2>
+                    <p>Every Minecraft player knows the frustration of moving villagers over long distances. The <strong>Villager on a Leash</strong> plugin puts an end to complicated rail systems and boat pushing.</p>
+                    <br>
+                    <p>It allows you to lead villagers (and even zombie villagers) with a standard lead, just like any other animal. This saves time, resources, and most importantly, your nerves.</p>
+                </div>
+
+                <div class="card">
+                    <h3 class="highlight" style="margin-bottom: 1rem;">Core Features</h3>
+                    <ul class="feature_list">
+                        <li><strong>Plug & Play:</strong> Install and start using it immediately.</li>
+                        <li><strong>Lead Support:</strong> Works with all types of villagers.</li>
+                        <li><strong>Customizable:</strong> Toggle <b>Wandering Traders</b> in the config.</li>
+                        <li><strong>Performance:</strong> Extremely lightweight for your server.</li>
+                        <li><strong>Modern:</strong> Optimized for the latest Minecraft versions.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section_title">Configuration</h2>
+            <div class="config_container">
+                <div class="config_header">
+                    <span>config.yml</span>
+                    <button class="btn_copy" id="copyBtn" onclick="copyConfig()">Copy Code</button>
+                </div>
+                <pre id="configCode"># Allow leashing of wandering traders
+# Default: false
+allow-leashing-wandering_traders: false
+                </pre>
+            </div>
+        </div>
+    </section>
+
+    <section class="section alt_bg">
+        <div class="container" style="text-align: center;">
+            <h2 class="section_title">Stats & Success</h2>
+            <div class="grid">
+                <div class="links_card">
+                    <h4>2.000</h4>
+                    <p style="color: var(--text-muted);">Downloads Worldwide</p>
+                </div>
+                <div class="links_card">
+                    <h4>Easy to install</h4>
+                    <p style="color: var(--text-muted);">Just put it in your Plugin-folder</p>
+                </div>
+                <div class="links_card">
+                    <h4>100%</h4>
+                    <p style="color: var(--text-muted);">Survival Friendly</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Pitchi (@pitchimc - Github, @pitchi777 - Discord)</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

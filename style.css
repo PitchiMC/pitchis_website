@@ -17,10 +17,29 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
+.body-points {
     background-color: #050505;
     background-image: radial-gradient(#1a1a1a 1px, transparent 1px);
     background-size: 30px 30px;
+    font-family: 'DM Sans', sans-serif;
+    color: var(--text);
+    min-height: 100vh;
+    box-shadow: 
+        inset 0 0 150px rgba(0, 0, 0, 1), 
+        inset 0 0 1000px rgba(0, 0, 0, 1);
+        
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.body-lines {
+    background-color: #050505;
+    /* Ersetzt das Punkte-Raster durch ein Linien-Grid */
+    background-image: 
+        linear-gradient(to right, #1a1a1a 1px, transparent 1px),
+        linear-gradient(to bottom, #1a1a1a 1px, transparent 1px);
+    background-size: 30px 30px;
+    
     font-family: 'DM Sans', sans-serif;
     color: var(--text);
     min-height: 100vh;
@@ -110,7 +129,7 @@ body {
 .badge {
     background: rgba(79, 195, 247, 0.1);
     color: var(--accent);
-    padding: 0.5rem 1.2rem;
+    padding: 0.5rem 1.2rem; 
     border-radius: 50px;
     font-size: 0.75rem;
     margin-bottom: 1.5rem;
@@ -171,8 +190,16 @@ body {
     text-decoration: none;
 }
 
-.card:hover { border-color: var(--accent); transform: translateY(-5px); }
-.card_icon { font-size: 2rem; margin-bottom: 1.5rem; }
+.card:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+}
+
+.card_icon {
+    margin-bottom: 1.5rem;
+    width: 8rem;
+    height: 8rem;
+}
 
 /* ── Pricing ── */
 .videos_grid {
@@ -303,4 +330,81 @@ footer {
 .link {
     color: rgb(196, 161, 97);
     text-decoration: none;
+}
+
+/* ── Configuration Box ── */
+.config_container {
+    background: #0a0a0a;
+    border: 1px solid var(--bar-border);
+    border-radius: 12px;
+    overflow: hidden;
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.config_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: var(--bar);
+    border-bottom: 1px solid var(--bar-border);
+    color: var(--text-muted);
+    font-family: 'Courier New', monospace;
+    font-size: 0.85rem;
+}
+
+pre {
+    padding: 20px;
+    color: var(--accent);
+    font-family: 'Courier New', monospace;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    line-height: 1.5;
+}
+
+/* ── Copy Button ── */
+.btn_copy {
+    background: transparent;
+    border: 1px solid var(--bar-border);
+    color: var(--text);
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.75rem;
+    transition: all 0.2s ease;
+}
+
+.btn_copy:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.btn_copy.copied {
+    background: #fff !important;
+    color: #000 !important;
+    border-color: #fff !important;
+}
+
+/* ── Plugin Specifics ── */
+.project_icon_large {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 2rem;
+    filter: drop-shadow(0 0 25px rgba(243, 167, 26, 0.4));
+    border-radius: 24px;
+}
+
+.feature_list {
+    list-style: none;
+    text-align: left;
+}
+
+.feature_list li {
+    margin-bottom: 0.8rem;
+    color: var(--text-muted);
+}
+
+.feature_list b {
+    color: var(--text);
 }
