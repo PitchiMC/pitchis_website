@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitchi | Wireless Redstone</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Syne:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/resources/img/icon.png?v=1.2">
+    <link rel="apple-touch-icon" href="/resources/img/icon.png">
+    <script src="/index.js"></script>
+</head>
+<body class="body-lines">
+
+    <div id="cursor-follower" class="cursor-follower"></div>
+
+    <nav class="locbar">
+        <div class="locbar_links">
+            <a href="/index.html#hero" class="locbar_text">Home</a>
+            <a href="/index.html#aboutme" class="locbar_text">About me</a>
+        </div>
+
+        <a href="/index.html" class="locbar_brand">PITCHI</a>
+
+        <div class="locbar_links">
+            <a href="/index.html#projects" class="locbar_text active">Projects</a>
+            <a href="/index.html#videos" class="locbar_text">Videos</a>
+            <a href="/index.html#links" class="locbar_text">Links</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="badge">Minecraft Plugin</div>
+        <img src="/resources/img/wireless_redstone.png" alt="Icon" class="project_icon_large">
+        <h1>Wireless <span class="highlight">Redstone</span></h1>
+        <p>The ultimate cable-free solution. No trails, no repeaters – just Lightning Rods and a frequency book.</p>
+        <div class="hero_btns">
+            <a href="https://modrinth.com/plugin/wireless-redstone-plugin" target="_blank" class="btn_primary">Download on Modrinth</a>
+            <a href="https://discord.com/invite/HKbunnVuRD" class="btn_secondary">Support Discord</a>
+        </div>
+    </header>
+
+    <section class="section alt_bg">
+        <div class="container">
+            <div class="grid_2col">
+                <div class="text_block">
+                    <h2 class="section_title" style="text-align: left; margin-bottom: 1.5rem;">Cables are History</h2>
+                    <p>Every redstone engineer knows the pain of hiding long lines of dust and repeaters. <strong>Wireless Redstone</strong> uses Lightning Rods as powerful antennas to transmit signals through the air.</p>
+                    <br>
+                    <p>By simply using a book to set frequencies, you can connect complex machines across chunks without a single block of redstone dust in between. It’s clean, it’s fast, and it looks vanilla.</p>
+                </div>
+
+                <div class="card">
+                    <h3 class="highlight" style="margin-bottom: 1rem;">Core Features</h3>
+                    <ul class="feature_list">
+                        <li><strong>Vanilla Style:</strong> Uses Lightning Rods as antennas.</li>
+                        <li><strong>Infinite Channels:</strong> Create unique frequencies via Book & Quill.</li>
+                        <li><strong>Visual Feedback:</strong> Rods glow when receiving a signal.</li>
+                        <li><strong>Oxidation Support:</strong> Works with all Rod variants (Waxed, Oxidized, etc.).</li>
+                        <li><strong>Ultra Light:</strong> Zero lag, optimized for high-speed signal updates.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container grid_2col">
+                <img src="/resources/img/wireless_redstone_stock1.png" class="card grid_img">
+                <img src="/resources/img/wireless_redstone_stock2.png" class="card grid_img">
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section_title">Configuration</h2>
+            <div class="config_container">
+                <div class="config_header">
+                    <span>config.yml</span>
+                    <button class="btn_copy" id="copyBtn" onclick="copyConfig()">Copy Code</button>
+                </div>
+                <pre id="configCode"># Wireless Redstone Data Storage
+# This file stores your registered senders and receivers.
+# Do not edit manually unless you know what you are doing.
+
+data:
+  '100':
+    senders:
+    - world,10,64,10
+    receivers:
+    - world,20,64,20
+                </pre>
+            </div>
+        </div>
+    </section>
+
+    <section class="section alt_bg">
+        <div class="container" style="text-align: center;">
+            <h2 class="section_title">Efficiency & Design</h2>
+            <div class="grid">
+                <div class="links_card">
+                    <h4>No Commands</h4>
+                    <p style="color: var(--text-muted);">Configure everything in-game with items</p>
+                </div>
+                <div class="links_card">
+                    <h4>Multi-Variant</h4>
+                    <p style="color: var(--text-muted);">Supports all weathered Lightning Rods</p>
+                </div>
+                <div class="links_card">
+                    <h4>100%</h4>
+                    <p style="color: var(--text-muted);">Survival Friendly</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Pitchi (@pitchimc - Github, @pitchi777 - Discord)</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

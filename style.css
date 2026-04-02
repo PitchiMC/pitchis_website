@@ -163,6 +163,15 @@ html {
     gap: 4rem;
 }
 
+.grid_img {
+    margin-top: 2rem;
+    max-width: 32.2rem;
+}
+
+.grid_img:hover {
+    max-width: 32.8rem;
+}
+
 /* ── Cards ── */
 .card {
     background: var(--bar);
