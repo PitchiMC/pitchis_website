@@ -166,6 +166,7 @@ html {
 .grid_img {
     margin-top: 2rem;
     max-width: 32.2rem;
+    max-height: 20rem;
 }
 
 .grid_img:hover {
