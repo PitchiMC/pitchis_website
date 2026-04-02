@@ -7,10 +7,10 @@
 :root {
     --bg: #151b1f;
     --bar: #222121;
-    --bar-border: #493d2e;
-    --accent: #f3a71a;
+    --bar-border: #2e4349;
+    --accent: #1ac0f3;
     --text: #cdd6dc;
-    --text-muted: #807463;
+    --text-muted: #636f80;
 }
 
 html {
@@ -322,7 +322,7 @@ footer {
 }
 
 .link {
-    color: rgb(196, 161, 97);
+    color: rgb(81, 170, 211);
     text-decoration: none;
 }
 
