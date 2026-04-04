@@ -175,6 +175,7 @@ html {
 
 /* ── Cards ── */
 .card {
+    position: relative;
     background: var(--bar);
     border: 1px solid var(--bar-border);
     padding: 2.5rem;
@@ -182,6 +183,16 @@ html {
     transition: 0.3s;
     color: white;
     text-decoration: none;
+}
+
+.card.featured {
+    border-color: var(--accent);
+    background: #1e2a30;
+    transform: scale(1.02);
+}
+
+.card.featured:hover {
+    transform: scale(1.05) translateY(-5px);
 }
 
 .card:hover {
