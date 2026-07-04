@@ -286,7 +286,13 @@ html {
 }
 
 /* ── Buttons ── */
+/* ── Modrinth Button & Icon Anpassungen ── */
 .btn_primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem; /* Abstand zwischen Logo und Text */
+    vertical-align: middle;
     background: var(--accent);
     color: #0d0d0d;
     padding: 1rem 2rem;
@@ -294,6 +300,35 @@ html {
     text-decoration: none;
     font-weight: 600;
     transition: 0.2s;
+}
+
+.btn_icon {
+    height: 2rem;
+    width: auto;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+/* ── Exakte Größe für das Crafting-Rezept ── */
+.recipe_img {
+    width: 345px;
+    height: 345px;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+}
+
+.recipe_img:hover {
+    transform: scale(1.02);
+}
+
+/* Responsive Fix für kleinere Bildschirme */
+@media (max-width: 400px) {
+    .recipe_img {
+        width: 100%;
+        height: auto;
+    }
 }
 
 .btn_secondary {

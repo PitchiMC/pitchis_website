@@ -35,7 +35,9 @@
         <h1>Villager on a <span class="highlight">Leash</span></h1>
         <p>The easiest way to transport villagers. No boats, no minecarts – just a lead and a right-click.</p>
         <div class="hero_btns">
-            <a href="https://modrinth.com/plugin/villiager-on-a-leash" target="_blank" class="btn_primary">Download on Modrinth</a>
+            <a href="https://modrinth.com/plugin/villiager-on-a-leash" target="_blank" class="btn_primary">
+                <img src="/resources/img/modrinth.png" alt="modrinth logo" class="btn_icon">Download on Modrinth
+            </a>
             <a href="https://discord.com/invite/HKbunnVuRD" class="btn_secondary">Support Discord</a>
         </div>
     </header>
@@ -55,11 +57,16 @@
                     <ul class="feature_list">
                         <li><strong>Plug & Play:</strong> Install and start using it immediately.</li>
                         <li><strong>Lead Support:</strong> Works with all types of villagers.</li>
-                        <li><strong>Customizable:</strong> Toggle <b>Wandering Traders</b> in the config.</li>
+                        <li><strong>Customizable:</strong> Toggle <strong>Wandering Traders</strong> in the config.</li>
+                        <li><strong>Special Leash:</strong> Enable a custom crafting recipe in the config for balanced survival gameplay.</li>
                         <li><strong>Performance:</strong> Extremely lightweight for your server.</li>
                         <li><strong>Modern:</strong> Optimized for the latest Minecraft versions.</li>
                     </ul>
                 </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <h3 style="margin-bottom: 1rem;">Crafting Recipe</h3>
+                <img src="/resources/img/recipe.png" alt="Villager Leash Crafting Recipe" class="recipe_img">
             </div>
         </div>
     </section>
@@ -67,14 +74,38 @@
     <section class="section">
         <div class="container">
             <h2 class="section_title">Configuration</h2>
+            
+            <p style="text-align: center; max-width: 600px; margin: 0 auto 2rem auto; color: var(--text-muted);">
+                You can easily enable the custom <strong>Villager Leash</strong> by setting <code style="color: var(--highlight);">require-special-leash: true</code> in your config file. Once activated, regular leads will no longer work on villagers.
+            </p>
+
             <div class="config_container">
                 <div class="config_header">
                     <span>config.yml</span>
                     <button class="btn_copy" id="copyBtn" onclick="copyConfig()">Copy Code</button>
                 </div>
-                <pre id="configCode"># Allow leashing of wandering traders
-# Default: false
-allow-leashing-wandering_traders: false
+                <pre id="configCode"># Config´s plugin version: 0.9.6
+
+# Allow leashing of wandering traders
+# Wandering traders exist since 1.14+. Older versions just ignore this option
+allow-leashing-wandering_traders: false # Default: false
+
+# Activates the special leash crafting recipe (normal ones don´t work on villagers anymore when activated!)
+require-special-leash: false # Default: false
+#Recipe:
+# -------------------------------
+# |         |         |         |
+# |   ///   | EMERALD |   ///   |
+# |         |         |         |
+# |---------|---------|---------|
+# |         |         |         |
+# | EMERALD |  LEASH  | EMERALD |
+# |         |         |         |
+# |---------|---------|---------|
+# |         |         |         |
+# |   ///   | EMERALD |   ///   |
+# |         |         |         |
+# -------------------------------
                 </pre>
             </div>
         </div>
