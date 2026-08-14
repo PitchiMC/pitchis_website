@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitchi | easyTimer</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Syne:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/resources/img/icon.png?v=1.2">
+    <link rel="apple-touch-icon" href="/resources/img/icon.png">
+    <script src="/index.js"></script>
+</head>
+<body class="body-lines">
+
+    <div id="cursor-follower" class="cursor-follower"></div>
+
+    <nav class="locbar">
+        <div class="locbar_links">
+            <a href="/index.html#hero" class="locbar_text">Home</a>
+            <a href="/index.html#aboutme" class="locbar_text">About me</a>
+        </div>
+
+        <a href="/index.html" class="locbar_brand">PITCHI</a>
+
+        <div class="locbar_links">
+            <a href="/index.html#projects" class="locbar_text active">Projects</a>
+            <a href="/index.html#videos" class="locbar_text">Videos</a>
+            <a href="/index.html#links" class="locbar_text">Links</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="badge">Minecraft Plugin</div>
+        <img src="/resources/img/easy_timer.png" alt="Icon" class="project_icon_large">
+        <h1>easy<span class="highlight">Timer</span></h1>
+        <p>The Ultimate Server Timer. Smooth RGB gradients, custom formats, and dynamic BossBars for your events.</p>
+        <div class="hero_btns">
+            <a href="https://builtbybit.com/resources/easy-timer.121166/" target="_blank" class="btn_primary">
+                <img src="/resources/img/builtbybit.png" alt="BuiltByBit logo" class="btn_icon">Buy on BuiltByBit ($4.99)
+            </a>
+            <a href="https://discord.com/invite/HKbunnVuRD" class="btn_secondary">Support Discord</a>
+        </div>
+    </header>
+
+    <section class="section alt_bg">
+        <div class="container">
+            <div class="grid_2col">
+                <div class="text_block">
+                    <h2 class="section_title" style="text-align: left; margin-bottom: 1.5rem;">Time Your Way</h2>
+                    <p>Forget boring white text – bring your server timer to life! <strong>easyTimer</strong> gives you absolute control over how, where, and when your time is displayed.</p>
+                    <br>
+                    <p>Whether you are hosting speedruns, server events, or mini-games, you can customize every single second with smooth animations, custom fonts, and a smart world-filter system.</p>
+                </div>
+
+                <div class="card">
+                    <h3 class="highlight" style="margin-bottom: 1rem;">Core Features</h3>
+                    <ul class="feature_list">
+                        <li><strong>RGB & Animations:</strong> Full HEX support with smooth Gradients and Rainbow modes (speeds 1–10).</li>
+                        <li><strong>Flexible Displays:</strong> Show the timer in the ActionBar, TabList, BossBar, or keep it running silently (None).</li>
+                        <li><strong>World Filter:</strong> Whitelist specific worlds for your events.</li>
+                        <li><strong>Multi-Language:</strong> 24 built-in languages, instantly switchable in-game.</li>
+                        <li><strong>Custom Formats:</strong> Build your own layout and map custom unicode characters or small caps.</li>
+                        <li><strong>Zero Lag:</strong> Heavily optimized asynchronous ticks and packet handling.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <img src="/resources/img/easy_timer_banner.png" alt="easyTimer Ultimate Server Timer Banner" class="recipe_img" style="max-width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section_title">Commands & Permissions</h2>
+            <p style="text-align: center; max-width: 600px; margin: 0 auto 2rem auto; color: var(--text-muted);">
+                Required permission for all administrative commands: <code style="color: var(--highlight);">timer.admin</code>. Fully equipped with smart tab-completion.
+            </p>
+
+            <div class="grid_2col">
+                <div class="card">
+                    <h3 class="highlight" style="margin-bottom: 1rem;">⏯️ Core Controls</h3>
+                    <ul class="feature_list">
+                        <li><code>/timer start</code> - Starts the timer.</li>
+                        <li><code>/timer pause</code> - Pauses the timer.</li>
+                        <li><code>/timer reset</code> - Resets the timer to 0.</li>
+                        <li><code>/timer set &lt;seconds&gt;</code> - Sets the timer value.</li>
+                        <li><code>/timer add &lt;seconds&gt;</code> - Adds time.</li>
+                        <li><code>/timer take &lt;seconds&gt;</code> - Subtracts time.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3 class="highlight" style="margin-bottom: 1rem;">🖌️ Design & Customization</h3>
+                    <ul class="feature_list">
+                        <li><code>/timer design position &lt;pos&gt;</code> - Change display area.</li>
+                        <li><code>/timer design color static &lt;color/HEX&gt;</code> - Set static color.</li>
+                        <li><code>/timer design color gradient &lt;c1&gt; &lt;c2&gt;</code> - Smooth gradient.</li>
+                        <li><code>/timer design color rainbow</code> - Enable RGB rainbow mode.</li>
+                        <li><code>/timer design animationspeed &lt;1-10&gt;</code> - Adjust speed.</li>
+                        <li><code>/timer design format &lt;format&gt;</code> - Change layout string.</li>
+                        <li><code>/timer design bossbar &lt;type&gt; &lt;val&gt;</code> - BossBar tweaks.</li>
+                        <li><code>/timer design chars &lt;char&gt; &lt;repl&gt;</code> - Map custom fonts.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem;" class="card">
+                <h3 class="highlight" style="margin-bottom: 1rem;">🛠️ Utility Commands</h3>
+                <ul class="feature_list">
+                    <li><code>/timer world &lt;add|remove|list&gt; &lt;world&gt;</code> - Manage world visibility whitelist.</li>
+                    <li><code>/timer lang &lt;language_code&gt;</code> - Instantly change plugin language globally.</li>
+                    <li><code>/timer reload</code> - Reloads configuration files live.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section alt_bg">
+        <div class="container">
+            <h2 class="section_title">PlaceholderAPI Support</h2>
+            <p style="text-align: center; max-width: 600px; margin: 0 auto 2rem auto; color: var(--text-muted);">
+                Integrate easyTimer seamlessly into any plugin supporting PlaceholderAPI (like TAB, DeluxeMenus, or holograms) using these built-in placeholders:
+            </p>
+
+            <div class="grid_2col">
+                <div class="card">
+                    <h3 class="highlight" style="margin-bottom: 1rem;">📌 Available Placeholders</h3>
+                    <ul class="feature_list">
+                        <li><code>%easytimer_time_designed%</code> - Outputs the styled timer with active colors/gradients.</li>
+                        <li><code>%easytimer_time%</code> - Outputs the plain formatted time string.</li>
+                        <li><code>%easytimer_seconds%</code> - Returns the raw number of remaining/elapsed seconds.</li>
+                        <li><code>%easytimer_status%</code> - Returns whether the timer is running or paused.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3 class="highlight" style="margin-bottom: 1rem;">⚙️ Recommended TAB Setup</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem;">
+                        If you're using our placeholders with the <a href="https://modrinth.com/plugin/tab-was-taken" class="link" target="_blank">TAB</a> plugin, configure fast refresh intervals in its config:
+                    </p>
+                    <pre style="background: var(--bg); padding: 0.75rem; border-radius: 8px; font-size: 0.85rem; color: var(--highlight);">placeholder-refresh-intervals:
+  "%easytimer_time_designed%": 50
+  "%easytimer_time%": 50
+  "%easytimer_seconds%": 50</pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section_title">Configuration</h2>
+            <p style="text-align: center; max-width: 600px; margin: 0 auto 2rem auto; color: var(--text-muted);">
+                Customize default behaviors, display formats, and animations directly in the config. Everything can also be changed live in-game using <code style="color: var(--highlight);">/timer design</code>.
+            </p>
+
+            <div class="config_container">
+                <div class="config_header">
+                    <span>config.yml</span>
+                    <button class="btn_copy" id="copyBtn" onclick="copyConfig()">Copy Code</button>
+                </div>
+                <pre id="configCode"># easyTimer Main Configuration
+
+# Choose where the timer is displayed: ACTIONBAR, BOSSBAR, TABLIST, NONE
+display-position: ACTIONBAR
+
+# Design Settings
+design:
+  format: '{hours:"h "} {minutes:"m "} {seconds:"s"}'
+  # Available color modes: STATIC, GRADIENT, RAINBOW
+  color-mode: GRADIENT
+  color1: '#FF5555'
+  color2: '#5555FF'
+  animation-speed: 5
+  bold-text: true
+
+# BossBar Specifics
+bossbar:
+  color: BLUE
+  style: SOLID
+  # Use 'TIME' to sync with seconds, or a fixed percentage (0.0 - 1.0)
+  progress: TIME
+
+# World Filter (Leave empty to allow all worlds)
+allowed-worlds:
+  - 'event_world'
+  - 'speedrun_map'
+                </pre>
+            </div>
+        </div>
+    </section>
+
+    <section class="section alt_bg">
+        <div class="container">
+            <h2 class="section_title">Frequently Asked Questions</h2>
+            <div class="grid_2col">
+                <div class="card">
+                    <h3 class="highlight" style="margin-bottom: 0.5rem;">Does it support Paper/Purpur?</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">Yes! easyTimer is fully optimized for modern Paper, Purpur, and Spigot servers from 1.16 up to the latest version.</p>
+                </div>
+                <div class="card">
+                    <h3 class="highlight" style="margin-bottom: 0.5rem;">Do I need PlaceholderAPI?</h3>
+                    <p style="color: var(--text-muted); font-size: 0.95rem;">PlaceholderAPI is optional. The plugin handles ActionBar, TabList, and Bossbar displays natively out of the box.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container" style="text-align: center;">
+            <h2 class="section_title">Included Languages (24)</h2>
+            <p style="color: var(--text-muted); max-width: 700px; margin: 0 auto 1.5rem auto;">
+                The plugin ships with extensive native localization support out-of-the-box:
+            </p>
+            <div class="card" style="display: inline-block; text-align: left; max-width: 800px; width: 100%;">
+                <p style="font-family: monospace; font-size: 0.9rem; line-height: 1.6; color: var(--highlight);">
+                    ar_sa, cs_cz, da_dk, de_de, el_gr, en_us, es_es, fi_fi, fr_fr, hi_in, hr_hr, hu_hu, it_it, ja_jp, nl_nl, no_no, pl_pl, pt_br, ru_ru, sv_se, sw_sw, th_th, tr_tr, zh_ch
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section alt_bg">
+        <div class="container" style="text-align: center;">
+            <h2 class="section_title">Stats & Success</h2>
+            <div class="grid">
+                <div class="links_card">
+                    <h4>24 Languages</h4>
+                    <p style="color: var(--text-muted);">Built-in & instantly switchable</p>
+                </div>
+                <div class="links_card">
+                    <h4>Fully Custom</h4>
+                    <p style="color: var(--text-muted);">Gradients, BossBars & HEX colors</p>
+                </div>
+                <div class="links_card">
+                    <h4>High Performance</h4>
+                    <p style="color: var(--text-muted);">Optimized async ticks</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Pitchi (websup@pitchi.de, @pitchi777 - Discord)</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
