@@ -34,7 +34,6 @@ html {
 
 .body-lines {
     background-color: #050505;
-    /* Ersetzt das Punkte-Raster durch ein Linien-Grid */
     background-image: 
         linear-gradient(to right, #1a1a1a 1px, transparent 1px),
         linear-gradient(to bottom, #1a1a1a 1px, transparent 1px);
@@ -49,6 +48,33 @@ html {
         
     line-height: 1.6;
     overflow-x: hidden;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(1500deg);
+  }
+}
+
+.nrw {
+  max-height: 120px;
+  position: fixed;
+  left: 2vw;
+  top: 1vh;
+  animation: spin linear;
+  animation-timeline: scroll();
+}
+
+.de {
+  max-height: 120px;
+  position: fixed;
+  right: 2vw;
+  top: 1vh;
+  animation: spin linear;
+  animation-timeline: scroll();
 }
 
 /* ── Nav ── */
