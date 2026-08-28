@@ -502,6 +502,26 @@ pre {
         margin-left: 0.2rem;
         margin-right: 0.2rem;
     }
+
+    .nrw {
+        max-height: 80px;
+        position: fixed;
+        left: 2vw;
+        top: 9vh;
+        animation: spin linear;
+        animation-timeline: scroll();
+        z-index: 10000;
+    }
+
+    .de {
+        max-height: 80px;
+        position: fixed;
+        right: 2vw;
+        top: 9vh;
+        animation: spin linear;
+        animation-timeline: scroll();
+        z-index: 10000;
+    }
 }
 
 @media (max-width: 768px) {
