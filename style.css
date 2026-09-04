@@ -66,22 +66,24 @@ html {
   top: 1vh;
   animation: spin linear;
   animation-timeline: scroll();
+  z-index: 1001;
 }
 
 .de {
-  max-height: 120px;
+  max-height: 115px;
   position: fixed;
   right: 2vw;
   top: 1vh;
   animation: spin linear;
   animation-timeline: scroll();
+  z-index: 1001;
 }
 
 /* ── Nav ── */
 .locbar {
     position: fixed;
     top: 0.7rem; left: 15rem; right: 15rem;
-    z-index: 100;
+    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -209,6 +211,7 @@ html {
     transition: 0.3s;
     color: white;
     text-decoration: none;
+    z-index: 100;
 }
 
 .card.featured {
@@ -510,7 +513,7 @@ pre {
         top: 9vh;
         animation: spin linear;
         animation-timeline: scroll();
-        z-index: 10000;
+        z-index: 1001;
     }
 
     .de {
@@ -520,7 +523,7 @@ pre {
         top: 9vh;
         animation: spin linear;
         animation-timeline: scroll();
-        z-index: 10000;
+        z-index: 1001;
     }
 }
 
