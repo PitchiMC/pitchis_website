@@ -1,0 +1,261 @@
+/* ── Autumn/Winter theme: load AFTER style.css ──
+   <link rel="stylesheet" href="autumn-winter.css"> */
+
+:root {
+    --ember: #D98A4D;
+    --rust: #9A5A2E;
+    --amber: #E3A56F;
+    --berry: #7A2E3B;
+    --frost: #9FC3D6;
+    --ice: #DCEBF2;
+    --pine: #1E3A34;
+}
+
+/* ── Hero: Bild als Hintergrund ── */
+.hero_video { display: none; } /* falls das Video noch im HTML steckt */
+
+.hero_bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: url("resources/img/leaf_bg.jpg") center / cover no-repeat;
+    filter: brightness(0.55) saturate(0.9);
+    transform: scale(1.04);
+}
+
+.hero_overlay {
+    background:
+        radial-gradient(ellipse at 20% 85%, rgba(217, 138, 77, 0.28), transparent 55%),
+        radial-gradient(ellipse at 85% 15%, rgba(159, 195, 214, 0.22), transparent 55%),
+        linear-gradient(to bottom, rgba(21, 27, 31, 0.45), rgba(5, 5, 5, 0.9));
+}
+
+/* weicher Übergang vom Hero in die Seite */
+.hero::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 160px;
+    z-index: 1;
+    background: linear-gradient(to bottom, transparent, #050505);
+    pointer-events: none;
+}
+
+/* ── Animierter Herbst→Winter-Verlauf auf der Überschrift ── */
+.highlight {
+    background: linear-gradient(100deg, #9A5A2E, #D98A4D, #E3A56F, #DCEBF2, #9FC3D6, #D98A4D);
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: seasonShift 14s ease-in-out infinite alternate;
+}
+
+@keyframes seasonShift {
+    from { background-position: 0% 50%; }
+    to   { background-position: 100% 50%; }
+}
+
+.section_title {
+    background: linear-gradient(90deg, #fff 0%, var(--amber) 55%, var(--frost) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    width: fit-content;
+    margin-inline: auto;
+    margin-bottom: 4rem;
+}
+
+/* ── Sektionen mit Farbverläufen ── */
+#aboutme {
+    background:
+        radial-gradient(circle at 10% 0%, rgba(122, 46, 59, 0.18), transparent 45%),
+        radial-gradient(circle at 95% 100%, rgba(217, 138, 77, 0.12), transparent 50%);
+}
+
+.alt_bg {
+    background:
+        linear-gradient(180deg, rgba(30, 58, 52, 0.22), rgba(217, 138, 77, 0.05) 60%, rgba(159, 195, 214, 0.08));
+}
+
+#videos {
+    background: radial-gradient(ellipse at 50% 0%, rgba(159, 195, 214, 0.10), transparent 60%);
+}
+
+/* ── Divider mit Blatt / Schneeflocke ── */
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    color: var(--amber);
+    font-size: 1.4rem;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--ember), var(--frost), transparent);
+}
+
+.divider img {
+    height: 1.8rem;
+    width: auto;
+}
+
+/* ── Karten: Verlaufsrand + Glow ── */
+.card {
+    background:
+        linear-gradient(var(--bar), var(--bar)) padding-box,
+        linear-gradient(135deg, var(--bar-border), rgba(217, 138, 77, 0.25), rgba(159, 195, 214, 0.25)) border-box;
+    border: 1px solid transparent;
+}
+
+.card:hover {
+    background:
+        linear-gradient(#1b1a1a, #1b1a1a) padding-box,
+        linear-gradient(135deg, var(--ember), var(--berry), var(--frost)) border-box;
+    box-shadow: 0 12px 40px rgba(217, 138, 77, 0.18), 0 0 30px rgba(159, 195, 214, 0.08);
+}
+
+.card.featured {
+    background:
+        linear-gradient(160deg, #26231f, #1e2a30) padding-box,
+        linear-gradient(135deg, var(--ember), var(--amber), var(--frost)) border-box;
+}
+
+/* Preis-Etikett als kleines Schild */
+.card_pricetag {
+    background: linear-gradient(135deg, rgba(154, 90, 46, 0.55), rgba(122, 46, 59, 0.45));
+    border: 1px solid rgba(227, 165, 111, 0.35);
+    text-shadow: none;
+    backdrop-filter: blur(4px);
+}
+
+.popular_tag {
+    background: linear-gradient(90deg, var(--rust), var(--ember), var(--amber));
+    box-shadow: 0 0 18px rgba(217, 138, 77, 0.45);
+}
+
+/* Eckakzent: kleines Blatt oben links auf Featured-Karten */
+.card.featured::before {
+    content: "";
+    position: absolute;
+    top: -14px; left: -10px;
+    width: 2rem;
+    height: 2rem;
+    background: url("resources/img/leaf1.png") center / contain no-repeat;
+    transform: rotate(-18deg);
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.6));
+}
+
+/* ── Buttons ── */
+.btn_primary {
+    background: linear-gradient(90deg, var(--rust), var(--ember), var(--amber));
+    background-size: 200% 100%;
+    transition: background-position 0.4s, box-shadow 0.3s;
+}
+
+.btn_primary:hover {
+    background-position: 100% 0;
+    box-shadow: 0 0 24px rgba(217, 138, 77, 0.5);
+}
+
+.btn_secondary {
+    border-color: rgba(159, 195, 214, 0.4);
+}
+
+.btn_secondary:hover {
+    background: rgba(159, 195, 214, 0.12);
+    color: var(--ice);
+}
+
+/* ── Link-Karten ── */
+.links_card {
+    background: linear-gradient(145deg, rgba(217, 138, 77, 0.06), rgba(159, 195, 214, 0.06));
+}
+
+.links_card:hover {
+    border-color: var(--ember);
+    box-shadow: 0 0 24px rgba(217, 138, 77, 0.15);
+}
+
+.links_card h4 {
+    background: linear-gradient(90deg, var(--ember), var(--amber), var(--frost));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ── Nav: dezenter Verlauf ── */
+.locbar {
+    background-image: linear-gradient(90deg, rgba(154, 90, 46, 0.14), transparent 40%, rgba(159, 195, 214, 0.10));
+}
+
+/* ── Footer ── */
+footer {
+    border-top: 0;
+    position: relative;
+    background: linear-gradient(to top, rgba(30, 58, 52, 0.25), transparent);
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--rust), var(--ember), var(--frost), transparent);
+}
+
+/* ── Fallende Blätter & Schneeflocken (nur CSS) ── */
+.fall {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 50;
+}
+
+.fall i {
+    position: absolute;
+    top: -8vh;
+    font-style: normal;
+    opacity: 0.7;
+    animation: drift linear infinite;
+}
+
+.fall i img {
+    width: 2em;
+    height: auto;
+    display: block;
+}
+
+.fall i:nth-child(1) { left: 6%;  font-size: 1.3rem; animation-duration: 19s; animation-delay: -2s; }
+.fall i:nth-child(2) { left: 18%; font-size: 0.9rem; animation-duration: 24s; animation-delay: -9s; }
+.fall i:nth-child(3) { left: 31%; font-size: 1.1rem; animation-duration: 21s; animation-delay: -5s; }
+.fall i:nth-child(4) { left: 47%; font-size: 0.8rem; animation-duration: 27s; animation-delay: -14s; }
+.fall i:nth-child(5) { left: 62%; font-size: 1.2rem; animation-duration: 20s; animation-delay: -7s; }
+.fall i:nth-child(6) { left: 74%; font-size: 0.9rem; animation-duration: 25s; animation-delay: -11s; }
+.fall i:nth-child(7) { left: 86%; font-size: 1.3rem; animation-duration: 22s; animation-delay: -3s; }
+.fall i:nth-child(8) { left: 95%; font-size: 1rem;   animation-duration: 26s; animation-delay: -16s; }
+
+@keyframes drift {
+    0%   { transform: translate3d(0, 0, 0) rotate(0deg); }
+    50%  { transform: translate3d(40px, 55vh, 0) rotate(180deg); }
+    100% { transform: translate3d(-30px, 112vh, 0) rotate(360deg); }
+}
+
+/* ── Barrierefreiheit ── */
+@media (prefers-reduced-motion: reduce) {
+    .fall, .highlight { animation: none; }
+    .fall { display: none; }
+}
+
+@media (max-width: 768px) {
+    .fall i:nth-child(n+5) { display: none; }
+    .card.featured::before { left: -4px; }
+}
