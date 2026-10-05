@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pitchi | Simple Lobby Command</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Syne:wght@700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="/resources/img/icon.png?v=1.2">
+    <link rel="apple-touch-icon" href="/resources/img/icon.png">
+    <script src="/index.js"></script>
+</head>
+<body class="body-lines">
+
+    <div id="cursor-follower" class="cursor-follower"></div>
+
+    <nav class="locbar">
+        <div class="locbar_links">
+            <a href="/index.html#hero" class="locbar_text">Home</a>
+            <a href="/index.html#aboutme" class="locbar_text">About me</a>
+        </div>
+
+        <a href="/index.html" class="locbar_brand">PITCHI</a>
+
+        <div class="locbar_links">
+            <a href="/index.html#projects" class="locbar_text active">Projects</a>
+            <a href="/index.html#videos" class="locbar_text">Videos</a>
+            <a href="/index.html#links" class="locbar_text">Links</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="badge">Minecraft Plugin</div>
+        <img src="/resources/img/simple_lobby_command.png" alt="Icon" class="project_icon_large">
+        <h1>Simple <span class="highlight">Lobby Command</span></h1>
+        <p>A simple and lightweight lobby plugin. Nothing more, nothing less.</p>
+
+        <div class="hero_btns">
+            <a href="https://modrinth.com/plugin/simple-lobby-command" target="_blank" class="btn_primary">
+                Download on Modrinth
+            </a>
+            <a href="https://discord.gg/Tw7qx4Z9RN" class="btn_secondary">
+                Support Discord
+            </a>
+        </div>
+    </header>
+
+    <section class="section alt_bg">
+        <div class="container">
+            <div class="grid_2col">
+
+                <div class="text_block">
+                    <h2 class="section_title" style="text-align: left; margin-bottom: 1.5rem;">
+                        Keep it Simple
+                    </h2>
+
+                    <p>
+                        <strong>Simple Lobby Command</strong> is a lightweight Minecraft
+                        plugin that does exactly what you need for a basic lobby system.
+                    </p>
+
+                    <br>
+
+                    <p>
+                        Set your lobby location with <code>/setlobby</code> and let your
+                        players return to it anytime with <code>/lobby</code>.
+                        No unnecessary features, no complicated setup.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3 class="highlight" style="margin-bottom: 1rem;">
+                        Core Features
+                    </h3>
+
+                    <ul class="feature_list">
+                        <li><strong>/lobby:</strong> Teleport to the configured lobby.</li>
+                        <li><strong>/setlobby:</strong> Set the current location as the lobby.</li>
+                        <li><strong>Lightweight:</strong> Does exactly what it needs to do.</li>
+                        <li><strong>Simple:</strong> No unnecessary features or bloat.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section_title">Commands & Permissions</h2>
+
+            <div class="grid_2col">
+
+                <div class="card">
+                    <h3 class="highlight" style="margin-bottom: 1rem;">
+                        Commands
+                    </h3>
+
+                    <ul class="feature_list">
+                        <li><code>/lobby</code> - Teleport to the lobby.</li>
+                        <li><code>/setlobby</code> - Set the lobby location.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3 class="highlight" style="margin-bottom: 1rem;">
+                        Permission
+                    </h3>
+
+                    <ul class="feature_list">
+                        <li>
+                            <code>simplelobbycommand.setlobby</code>
+                            - Allows the use of <code>/setlobby</code>.
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="section alt_bg">
+        <div class="container" style="text-align: center;">
+            <h2 class="section_title">Simple by Design</h2>
+
+            <div class="grid">
+                <div class="links_card">
+                    <h4>2 Commands</h4>
+                    <p style="color: var(--text-muted);">
+                        That's all you need
+                    </p>
+                </div>
+
+                <div class="links_card">
+                    <h4>Lightweight</h4>
+                    <p style="color: var(--text-muted);">
+                        Minimal resource usage
+                    </p>
+                </div>
+
+                <div class="links_card">
+                    <h4>No Bloat</h4>
+                    <p style="color: var(--text-muted);">
+                        Nothing unnecessary
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Pitchi (websup@pitchi.de, @pitchi777 - Discord)</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
